@@ -58,7 +58,7 @@ namespace ProyectoFinalNS
             //
             if (observacionDia1.Count <= 0)
             {
-                return false;  // Tenemos que tener al menos una observación
+                throw new Exception("No puede estar vacio la observacion del dia 1");  // Tenemos que tener al menos una observación
             }
 
             for (i = 0; i < observacionDia1.Count; i++)
@@ -81,7 +81,7 @@ namespace ProyectoFinalNS
 
             if (observacionDia2.Count <= 0)
             {
-                return false;  // Tenemos que tener al menos una observación
+                throw new Exception("No puede estar vacio la observacion del dia 2"); // Tenemos que tener al menos una observación
             }
 
             for (i = 0; i < observacionDia2.Count; i++)
@@ -104,7 +104,7 @@ namespace ProyectoFinalNS
 
             if (observacionDia3.Count <= 0)
             {
-                return false;  // Tenemos que tener al menos una observación
+                throw new Exception("No puede estar vacio la observacion del dia 3");  // Tenemos que tener al menos una observación
             }
 
             for (i = 0; i < observacionDia3.Count; i++)
