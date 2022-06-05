@@ -122,7 +122,7 @@ namespace ProyectoFinalNS
             if (observacionDia3.Count <= 0)
             {
 
-                throw new Exception("No puede estar vacio la observacion del dia 33333333");  // Tenemos que tener al menos una observación
+                throw new Exception("No puede estar vacio la observacion del dia 3333333333333");  // Tenemos que tener al menos una observación
             }
 
 
