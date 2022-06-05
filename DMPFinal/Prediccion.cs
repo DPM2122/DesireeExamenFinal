@@ -56,7 +56,7 @@ namespace ProyectoFinalNS
         /// <param name="observacionDia2">Observación de temperatura del segundo dia</param>
         /// <param name="observacionDia3">Observación de temperatura del tercer dia</param>
         /// <returns>Devuelve una estimación basada en una fórmula, además, la función retorna true si se ha podido obtener la predicción, false si ha ocurrido un error</returns>
-        public bool PrediccionTemperatura(List<double> observacionDia1, List<double> observacionDia2, List<double> observacionDia3)
+        public void PrediccionTemperatura(List<double> observacionDia1, List<double> observacionDia2, List<double> observacionDia3)
         {
             int i;  // contador
             double tempMedia1 = 0,
@@ -70,8 +70,9 @@ namespace ProyectoFinalNS
             //
             if (observacionDia1.Count <= 0)
             {
-                return false;
-                throw new Exception("Al menos tiene que existir una observacion");// Tenemos que tener al menos una observación
+
+                throw new Exception("No puede estar vacio la observacion del dia 1");  // Tenemos que tener al menos una observación
+
             }
 
             for (i = 0; i < observacionDia1.Count; i++)
@@ -94,8 +95,9 @@ namespace ProyectoFinalNS
 
             if (observacionDia2.Count <= 0)
             {
-                return false;
-                throw new Exception("Al menos tiene que existir una observacion");// Tenemos que tener al menos una observación
+
+
+                throw new Exception("No puede estar vacio la observacion del dia 2"); // Tenemos que tener al menos una observación
 
             }
 
@@ -119,10 +121,10 @@ namespace ProyectoFinalNS
 
             if (observacionDia3.Count <= 0)
             {
-                return false;
-                throw new Exception("Al menos tiene que existir una observacion");// Tenemos que tener al menos una observación
 
+                throw new Exception("No puede estar vacio la observacion del dia 3");  // Tenemos que tener al menos una observación
             }
+
 
             for (i = 0; i < observacionDia3.Count; i++)
             {
@@ -141,16 +143,17 @@ namespace ProyectoFinalNS
 
             tempMedia3 = tempMedia3 / observacionDia3.Count;
 
-            // Finalmente calculamos la temperatura media total, dándo más peso 		
-            // al último día que al primero
-            //
-            TempCelsius = 0.2 * tempMedia1 + 0.35 * tempMedia2 + 0.45 * tempMedia3;
+                // Finalmente calculamos la temperatura media total, dándo más peso 		
+                // al último día que al primero
+                //
+                TempCelsius = 0.2 * tempMedia1 + 0.35 * tempMedia2 + 0.45 * tempMedia3;
 
-            // calculamos también la temperatura en grados farenheit
-            //
-            TempFarenheit = (TempCelsius * 1.8) + 32;
+                // calculamos también la temperatura en grados farenheit
+                //
+                TempFarenheit = (TempCelsius * 1.8) + 32;
 
-            return true;
+               
+            }
         }
     }
 }
