@@ -38,6 +38,18 @@ namespace ProyectoFinalNS
         }
 
         /// <summary>
+        /// El constructor inicializa las variables a 0
+        /// </summary>
+        public Prediccion()
+        {
+            TempCelsius = 0;
+            TempFarenheit = 0;
+            TempMax = 1000;
+            TempMin = -1000;
+
+        }
+
+        /// <summary>
         /// La siguiente función obtiene la temperatura promedio de cada uno de los días que se pasan como parámetro
         /// </summary>
         /// <param name="observacionDia1">Observación de temperatura del primer dia</param>
@@ -58,7 +70,8 @@ namespace ProyectoFinalNS
             //
             if (observacionDia1.Count <= 0)
             {
-                return false;  // Tenemos que tener al menos una observación
+                return false;
+                throw new Exception("Al menos tiene que existir una observacion");// Tenemos que tener al menos una observación
             }
 
             for (i = 0; i < observacionDia1.Count; i++)
@@ -81,7 +94,9 @@ namespace ProyectoFinalNS
 
             if (observacionDia2.Count <= 0)
             {
-                return false;  // Tenemos que tener al menos una observación
+                return false;
+                throw new Exception("Al menos tiene que existir una observacion");// Tenemos que tener al menos una observación
+
             }
 
             for (i = 0; i < observacionDia2.Count; i++)
@@ -104,7 +119,9 @@ namespace ProyectoFinalNS
 
             if (observacionDia3.Count <= 0)
             {
-                return false;  // Tenemos que tener al menos una observación
+                return false;
+                throw new Exception("Al menos tiene que existir una observacion");// Tenemos que tener al menos una observación
+
             }
 
             for (i = 0; i < observacionDia3.Count; i++)
@@ -119,7 +136,6 @@ namespace ProyectoFinalNS
                 if (TempMax > observacionDia3[i])
                 {
                     TempMax = observacionDia1[i];
-
                 }
             }
 
