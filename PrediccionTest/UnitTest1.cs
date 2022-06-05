@@ -19,21 +19,6 @@ namespace PrediccionTest
                          dia3 = new List<double>();
 
 
-            dia1.Add(12.5);
-            dia1.Add(16.5);
-            dia1.Add(21);
-            dia1.Add(17);
-            dia1.Add(15);
-            dia2.Add(13);
-            dia2.Add(15);
-            dia2.Add(19.5);
-            dia2.Add(16.5);
-            dia2.Add(14);
-            dia3.Add(14.5);
-            dia3.Add(18.5);
-            dia3.Add(23);
-            dia3.Add(20);
-            dia3.Add(17.5);
 
             dia1.Add(12.5); dia1.Add(16.5); dia1.Add(21); dia1.Add(17); dia1.Add(15); //media1 16.4
             dia2.Add(13); dia2.Add(15); dia2.Add(19.5); dia2.Add(16.5); dia2.Add(14); //media2 15.6
