@@ -122,7 +122,7 @@ namespace ProyectoFinalNS
             if (observacionDia3.Count <= 0)
             {
 
-                throw new Exception("No puede estar vacio la observacion del dia 3");  // Tenemos que tener al menos una observación
+                throw new Exception("No puede estar vacio la observacion del dia 33333333");  // Tenemos que tener al menos una observación
             }
 
 
@@ -149,11 +149,11 @@ namespace ProyectoFinalNS
                 TempCelsius = 0.2 * tempMedia1 + 0.35 * tempMedia2 + 0.45 * tempMedia3;
 
                 // calculamos también la temperatura en grados farenheit
-                //
+              
                 TempFarenheit = (TempCelsius * 1.8) + 32;
 
                
-            }
+            
         }
     }
 }
